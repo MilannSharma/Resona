@@ -1,0 +1,9 @@
+Resona Audio Engine
+Copyright 2026 Resona AI Contributors
+
+This product includes neural speech synthesis architectures and acoustic weights derived
+from open-weight research distributed under the Apache License, Version 2.0.
+
+Upstream Attributions:
+- Style-conditioned neural vocoding and prosody prediction architectures.
+- High-fidelity Indic fine-tuning and bilingual phoneme alignments.

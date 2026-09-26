@@ -1,0 +1,8 @@
+recursive-include resona/voices/assets *.pt
+recursive-include resona/voices/samples *.wav
+include resona/voices/registry.json
+recursive-include resona/vocab *.json
+recursive-include vocab *.json
+include README.md
+include LICENSE
+include NOTICE

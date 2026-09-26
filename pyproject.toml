@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resona-tts"
+version = "1.0.0"
+description = "Lightweight, 100% offline neural text-to-speech engine with authentic Hinglish code-switching."
+readme = "README.md"
+authors = [{ name = "Resona AI Team" }]
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0.0",
+    "soundfile>=0.12.0",
+    "numpy>=1.22.0",
+    "transformers>=4.30.0",
+    "phonemizer>=3.2.0"
+]
+
+[project.scripts]
+resona-tts = "resona.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["resona*"]
+
+[tool.setuptools.package-data]
+resona = [
+    "voices/registry.json",
+    "voices/assets/*.pt",
+    "voices/samples/*.wav",
+    "vocab/*.json",
+]
+
